@@ -1,7 +1,8 @@
 package com.level_fix.datagen;
 
 public class LangHelper {
-    private LangHelper(){}
+    private LangHelper() {}
+
     public static String toRoman(int number) {
 
         if (number < 1 || number > 256) {

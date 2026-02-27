@@ -13,8 +13,6 @@ public class ModENUSLangProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-
-        // Roman numeral levels up to 255
         for (int i = 11; i <= 256; ++i) {
             add("enchantment.level." + i, toRoman(i));
             add("potion.potency." + i, toRoman(i));

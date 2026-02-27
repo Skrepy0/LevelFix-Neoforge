@@ -8,8 +8,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(EffectRenderingInventoryScreen.class)
 public class EffectRenderingInventoryScreenMixin {
-    @Redirect(method = "getEffectName",at = @At(value = "INVOKE", target = "Lnet/minecraft/world/effect/MobEffectInstance;getAmplifier()I",ordinal = 1))
+    @Redirect(method = "getEffectName", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/effect/MobEffectInstance;getAmplifier()I", ordinal = 1))
     private int getEffectAmplifier(MobEffectInstance instance) {
-        return instance.getAmplifier()-246;
+        return instance.getAmplifier() - 246;
     }
 }
