@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(PotionContents.class)
 public class PotionContentsMixin {
-    @Redirect(method = "addPotionTooltip(Ljava/lang/Iterable;Ljava/util/function/Consumer;FF)V",at = @At(value = "INVOKE",target = "Lnet/minecraft/network/chat/Component;translatable(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;"))
+    @Redirect(method = "addPotionTooltip(Ljava/lang/Iterable;Ljava/util/function/Consumer;FF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/network/chat/Component;translatable(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;"))
     private static MutableComponent toRoman(String key) {
         if (Config.getPotionEnabledRomanNumbers()) return Component.translatable(key);
         if (key.startsWith("potion.potency.")) {
