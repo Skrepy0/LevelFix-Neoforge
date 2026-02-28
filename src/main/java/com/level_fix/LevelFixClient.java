@@ -12,7 +12,7 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import static com.mojang.text2speech.Narrator.LOGGER;
 
 @Mod(value = LevelFix.MOD_ID, dist = Dist.CLIENT)
-@EventBusSubscriber(modid = LevelFix.MOD_ID, value = Dist.CLIENT)
+@EventBusSubscriber(modid = LevelFix.MOD_ID, value = Dist.CLIENT,bus = EventBusSubscriber.Bus.MOD)
 public class LevelFixClient {
     public LevelFixClient(ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
