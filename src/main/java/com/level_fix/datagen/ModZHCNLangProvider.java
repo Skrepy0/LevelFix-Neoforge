@@ -11,5 +11,12 @@ public class ModZHCNLangProvider extends LanguageProvider {
     }
 
     @Override
-    protected void addTranslations() {}
+    protected void addTranslations() {
+        add("level_fix.configuration.enchantment_enabled_roman_numbers","附魔等级启用罗马数字");
+        add("level_fix.configuration.enchantment_enabled_roman_numbers.tooltip","关闭后，§d附魔等级§r将显示为阿拉伯数字");
+        add("level_fix.configuration.potion_enabled_roman_numbers","药水等级启用罗马数字");
+        add("level_fix.configuration.potion_enabled_roman_numbers.tooltip","关闭后，§d药水效果等级§r将显示为阿拉伯数字");
+        add("level_fix.configuration.effect_enabled_roman_numbers","效果等级ui显示启用罗马数字");
+        add("level_fix.configuration.effect_enabled_roman_numbers.tooltip","关闭后，玩家当前的§d效果等级§r将显示为阿拉伯数字");
+    }
 }

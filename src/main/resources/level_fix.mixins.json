@@ -2,7 +2,10 @@
   "required": true,
   "package": "com.level_fix.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "EnchantmentLevelDisplayMixin",
+    "PotionContentsMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
