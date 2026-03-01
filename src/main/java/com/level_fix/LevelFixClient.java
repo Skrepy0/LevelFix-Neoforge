@@ -9,6 +9,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
+
 import static com.mojang.text2speech.Narrator.LOGGER;
 
 @Mod(value = LevelFix.MOD_ID, dist = Dist.CLIENT)
