@@ -11,10 +11,10 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 @EventBusSubscriber(modid = LevelFix.MOD_ID)
 public class LevelFixDataGen {
     @SubscribeEvent
-    public static void gatherData(GatherDataEvent event) {
+    public static void onGatherData(GatherDataEvent.Client event){
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new ModENUSLangProvider(packOutput));
-        generator.addProvider(event.includeClient(), new ModZHCNLangProvider(packOutput));
+        event.addProvider(new ModENUSLangProvider(packOutput));
+        event.addProvider(new ModZHCNLangProvider(packOutput));
     }
 }
