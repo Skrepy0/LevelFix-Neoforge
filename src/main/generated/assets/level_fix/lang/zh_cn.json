@@ -1,0 +1,9 @@
+{
+  "text.autoconfig.level_fix.option.effectEnableRomanNumbers": "效果等级ui显示启用罗马数字",
+  "text.autoconfig.level_fix.option.effectEnableRomanNumbers.@Tooltip": "关闭后，玩家当前的效果等级将显示为阿拉伯数字",
+  "text.autoconfig.level_fix.option.enchantmentEnableRomanNumbers": "附魔等级启用罗马数字",
+  "text.autoconfig.level_fix.option.enchantmentEnableRomanNumbers.@Tooltip": "关闭后，附魔等级将显示为阿拉伯数字",
+  "text.autoconfig.level_fix.option.potionEnableRomanNumbers": "药水等级启用罗马数字",
+  "text.autoconfig.level_fix.option.potionEnableRomanNumbers.@Tooltip": "关闭后，药水效果等级将显示为阿拉伯数字",
+  "text.autoconfig.level_fix.title": "Level Fix 选项"
+}

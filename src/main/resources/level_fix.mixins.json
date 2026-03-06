@@ -3,8 +3,7 @@
   "package": "com.level_fix.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "EnchantmentLevelDisplayMixin",
-    "PotionContentsMixin"
+    "PotionUtilMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -13,6 +12,7 @@
     "requireAnnotations": true
   },
   "client": [
-    "EffectRenderingInventoryScreenMixin"
+    "AbstractInventoryScreenMixin",
+    "EnchantmentLevelDisplayMixin"
   ]
 }

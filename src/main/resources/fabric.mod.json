@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "level_fix",
+  "version": "${version}",
+  "name": "Level Fix",
+  "description": "Fix the display of Roman numerals for enchantment and potion effect levels.",
+  "authors": [
+    "Skrepy2233"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/level-fix",
+    "sources": "https://github.com/Skrepy0/LevelFix-Neoforge"
+  },
+  "license": "Apache License 2.0",
+  "icon": "assets/level_fix/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.level_fix.LevelFix"
+    ],
+    "fabric-datagen": [
+      "com.level_fix.LevelFixDataGenerator"
+    ],
+    "modmenu": [
+      "com.level_fix.config.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "level_fix.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

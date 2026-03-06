@@ -1,29 +1,26 @@
 package com.level_fix;
 
-import com.mojang.logging.LogUtils;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import com.level_fix.config.ModConfig;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
+import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Mod(LevelFix.MOD_ID)
-public class LevelFix {
+public class LevelFix implements ModInitializer {
+	public static final String MOD_ID = "level_fix";
 
-    public static final String MOD_ID = "level_fix";
+	// This logger is used to write text to the console and the log file.
+	// It is considered best practice to use your mod id as the logger's name.
+	// That way, it's clear which mod wrote info, warnings, and errors.
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-    public static final Logger LOGGER = LogUtils.getLogger();
-
-    public LevelFix(IEventBus modEventBus, ModContainer modContainer) {
-        NeoForge.EVENT_BUS.register(this);
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-    }
-
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("Level Fix Mod is loaded!");
-    }
+	@Override
+	public void onInitialize() {
+		// This code runs as soon as Minecraft is in a mod-load-ready state.
+		// However, some things (like resources) may still be uninitialized.
+		// Proceed with mild caution.
+        AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
+		LOGGER.info("Hello Fabric world!");
+	}
 }
