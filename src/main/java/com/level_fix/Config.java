@@ -7,6 +7,7 @@ public class Config {
     public static final ModConfigSpec.BooleanValue ENCHANTMENT_ENABLED_ROMAN_NUMBERS = BUILDER.define("enchantment_enabled_roman_numbers", true);
     public static final ModConfigSpec.BooleanValue POTION_ENABLED_ROMAN_NUMBERS = BUILDER.define("potion_enabled_roman_numbers", true);
     public static final ModConfigSpec.BooleanValue EFFECT_ENABLED_ROMAN_NUMBERS = BUILDER.define("effect_enabled_roman_numbers", true);
+    public static final ModConfigSpec.BooleanValue SHOW_BOTH = BUILDER.define("show_both", true);
 
     public static boolean getEnchantmentEnabledRomanNumbers() {
         return ENCHANTMENT_ENABLED_ROMAN_NUMBERS.get();
@@ -18,6 +19,10 @@ public class Config {
 
     public static boolean getEffectEnabledRomanNumbersInInventory() {
         return EFFECT_ENABLED_ROMAN_NUMBERS.get();
+    }
+
+    public static boolean getShowBoth() {
+        return SHOW_BOTH.get();
     }
 
     static final ModConfigSpec SPEC = BUILDER.build();
